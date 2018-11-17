@@ -1,7 +1,6 @@
 package com.paniclater.polymorphism;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 class Override {
 	int add(int a , int b) throws IllegalArgumentException {
@@ -23,9 +22,9 @@ public class LegalOverride extends Override {
 	//can have less restrictive access
 	///public int add(int a, int b) { return a + b; } 
 	//must maintain return type
-	//double add(int a, int b) { Double d = 10.0; return d; }// WILL NOT COMPILE
-
+	///double add(int a, int b) { Double d = 10.0; return d; }// WILL NOT COMPILE
 	//long add(int a ,int b) {long c=30; return c;}
+	///short add(int a ,int b) {short c=30; return c;}
 	///- The return type is incompatible with  Override.add(int, int)
 	//cannot throw broader checked exceptions	
 	//int add(int a, int b) throws Exception { return a + b; } WILL NOT COMPILE

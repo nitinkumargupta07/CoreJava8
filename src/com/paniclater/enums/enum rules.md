@@ -1,9 +1,5 @@
 #Rules for enum type
 1.An enum constant specifies an instance of the enum type.       
-2.An enum constant can be optionally followed by a list of arguments and a class body. The class body is an anonymous class which conforms to rules of anonymous classes and:
-3.	It cannot have any constructor.
-4.	It cannot have any abstract methods.
-5.	Instance methods declared in the class body are only accessible if they override accessible methods declared in the enclosing enum type.
 
 6.An enum type cannot be declared abstract or final.   
 7.The Enum<E> is the direct superclass of an enum type.    

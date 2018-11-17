@@ -56,10 +56,16 @@ class Dog extends Animal {
 	 * Animal(); }
 	 */
 	// The overriding method must have same return type (or subtype).
+
 	public Dog eat() {
 		System.out.println("sub class eat");
 		return new Dog();
 	}
+	
+	/*public Animal eat() {
+		System.out.println("sub class eat");
+		return new Dog();
+	}*/
 	// return type String is not compatible
 	/*
 	 * public String eat() { System.out.println("sub class eat"); return "Dog"; }
@@ -122,7 +128,8 @@ class Dog extends Animal {
 	 * protected void move1() throws IOException ,InterruptedException { }
 	 */
 	//IllegalArgumentException is unchecked exception.
-	protected void move1() throws IOException ,IllegalArgumentException { }
+	//@Override
+	protected void move1() throws FileNotFoundException,NullPointerException,ArithmeticException { }
 }
 
 class UpperPackage extends OverridePackageAnimal {

@@ -9,6 +9,18 @@ class B extends A {
 }
 
 public class Casting {
+	void go(B b) {
+		System.out.println("I worked");
+	}
+
+	void test(A a) {
+		System.out.println("I worked super");
+	}
+	static Object stop(ArrayList[] a) {
+		System.out.println("I worked");
+		return a;
+	}
+	
 	public static void main(String[] args) {
 		Casting c = new Casting();
 		// c.go(new A()); super class not allow
@@ -23,15 +35,5 @@ public class Casting {
 		c.go((B) m);
 	}
 
-	void go(B b) {
-		System.out.println("I worked");
-	}
-
-	void test(A a) {
-		System.out.println("I worked super");
-	}
-	static Object stop(ArrayList[] a) {
-		System.out.println("I worked");
-		return a;
-	}
+	
 }
