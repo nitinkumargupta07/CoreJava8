@@ -51,8 +51,4 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long> {
         ForkJoinTask<Long> task = new ForkJoinSumCalculator(numbers);
         return FORK_JOIN_POOL.invoke(task);
     }
-    
-    public static void main(String[] args) {
-		System.out.println("forkJoinSum  "+forkJoinSum(10));
-	}
 }

@@ -1,14 +1,11 @@
 package lambdasinaction.chap10;
 
-import static java.util.Optional.empty;
-import static java.util.Optional.of;
-import static java.util.Optional.ofNullable;
+import org.junit.*;
+
+import java.util.*;
+
+import static java.util.Optional.*;
 import static org.junit.Assert.assertEquals;
-
-import java.util.Optional;
-import java.util.Properties;
-
-import org.junit.Test;
 
 public class ReadPositiveIntParam {
 

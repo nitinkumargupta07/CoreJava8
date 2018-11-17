@@ -1,18 +1,10 @@
 package lambdasinaction.chap6;
 
+import java.util.*;
+import java.util.function.*;
+
+import static java.util.stream.Collectors.*;
 import static lambdasinaction.chap6.Dish.menu;
-
-import java.util.Comparator;
-import java.util.IntSummaryStatistics;
-import java.util.function.BinaryOperator;
-import java.util.stream.Collectors;
-
-import static java.util.stream.Collectors.averagingInt;
-import static java.util.stream.Collectors.counting;
-import static java.util.stream.Collectors.joining;
-import static java.util.stream.Collectors.reducing;
-import static java.util.stream.Collectors.summarizingInt;
-import static java.util.stream.Collectors.summingInt;
 
 public class Summarizing {
 
@@ -33,13 +25,12 @@ public class Summarizing {
     }
 
     private static Dish findMostCaloricDish() {
-        return menu.stream().collect(Collectors.reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)).get();
+        return menu.stream().collect(reducing((d1, d2) -> d1.getCalories() > d2.getCalories() ? d1 : d2)).get();
     }
 
     private static Dish findMostCaloricDishUsingComparator() {
         Comparator<Dish> dishCaloriesComparator = Comparator.comparingInt(Dish::getCalories);
         BinaryOperator<Dish> moreCaloricOf = BinaryOperator.maxBy(dishCaloriesComparator);
-        menu.stream().collect(reducing(BinaryOperator.maxBy( Comparator.comparingInt(Dish::getCalories)))).get();
         return menu.stream().collect(reducing(moreCaloricOf)).get();
     }
 

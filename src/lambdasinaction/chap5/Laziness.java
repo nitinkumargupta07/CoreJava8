@@ -21,9 +21,8 @@ public class Laziness {
                            System.out.println("mapping " + n);
                            return n * n;
                        })
-                      /// .limit(2)
+                       .limit(2)
                        .collect(toList());
-        twoEvenSquares.stream().forEach(System.out::print);
 
     }
 

@@ -33,7 +33,7 @@ public class StrategyMain {
         }
     }
 
-    private  static  class Validator{
+    static private class Validator{
         private final ValidationStrategy strategy;
         public Validator(ValidationStrategy v){
             this.strategy = v;

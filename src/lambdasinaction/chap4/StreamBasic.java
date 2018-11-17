@@ -24,7 +24,7 @@ public class StreamBasic {
     public static List<String> getLowCaloricDishesNamesInJava7(List<Dish> dishes){
         List<Dish> lowCaloricDishes = new ArrayList<>();
         for(Dish d: dishes){
-            if(d.getCalories() > 400){
+            if(d.getCalories() < 400){
                 lowCaloricDishes.add(d);
             }
         }
@@ -41,12 +41,8 @@ public class StreamBasic {
     }
 
     public static List<String> getLowCaloricDishesNamesInJava8(List<Dish> dishes){
-    	dishes.stream()
-        .filter(d -> d.getCalories() > 400)
-              .map(Dish::getName);
-        
         return dishes.stream()
-                .filter(d -> d.getCalories() > 400)
+                .filter(d -> d.getCalories() < 400)
                 .sorted(comparing(Dish::getCalories))
                 .map(Dish::getName)
                 .collect(toList());

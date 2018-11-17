@@ -9,9 +9,8 @@ import java.nio.file.*;
 public class BuildingStreams {
 
     public static void main(String...args) throws Exception{
-        String str="nitin kumar gupta adfdasfds sdfsldflsd lsdfjlsdjflsl jljl";
+        
         // Stream.of
-        Stream<String> stream12 =Stream.of(str.split(" "));
         Stream<String> stream = Stream.of("Java 8", "Lambdas", "In", "Action");
         stream.map(String::toUpperCase).forEach(System.out::println);
 
@@ -20,13 +19,12 @@ public class BuildingStreams {
 
         // Arrays.stream
         int[] numbers = {2, 3, 5, 7, 11, 13};
-        IntStream ssss=Arrays.stream(numbers);
         System.out.println(Arrays.stream(numbers).sum());
 
         // Stream.iterate
-      /*  Stream.iterate(0, n -> n + 2)
+        Stream.iterate(0, n -> n + 2)
               .limit(10)
-              .forEach(System.out::println);*/
+              .forEach(System.out::println);
 
         // fibonnaci with iterate
         Stream.iterate(new int[]{0, 1}, t -> new int[]{t[1],t[0] + t[1]})

@@ -11,7 +11,7 @@ public class ObserverMain {
         f.registerObserver(new NYTimes());
         f.registerObserver(new Guardian());
         f.registerObserver(new LeMonde());
-        f.notifyObservers("The queen said her favourite book price money 1$  is Java 8 in Action! enjoy wine");
+        f.notifyObservers("The queen said her favourite book is Java 8 in Action!");
 
 
         Feed feedLambda = new Feed();
@@ -37,16 +37,6 @@ public class ObserverMain {
     interface Subject{
         void registerObserver(Observer o);
         void notifyObservers(String tweet);
-    }
-    
-    static private class Feed implements Subject{
-        private final List<Observer> observers = new ArrayList<>();
-        public void registerObserver(Observer o) {
-            this.observers.add(o);
-        }
-        public void notifyObservers(String tweet) {
-            observers.forEach(o -> o.inform(tweet));
-        }
     }
 
     static private class NYTimes implements Observer{
@@ -76,6 +66,14 @@ public class ObserverMain {
         }
     }
 
-    
+    static private class Feed implements Subject{
+        private final List<Observer> observers = new ArrayList<>();
+        public void registerObserver(Observer o) {
+            this.observers.add(o);
+        }
+        public void notifyObservers(String tweet) {
+            observers.forEach(o -> o.inform(tweet));
+        }
+    }
 
 }

@@ -1,6 +1,5 @@
 package lambdasinaction.chap8;
 
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -9,7 +8,6 @@ import java.util.function.Supplier;
 public class FactoryMain {
 
     public static void main(String[] args) {
-    	Collections.unmodifiableMap(map);
         Product p1 = ProductFactory.createProduct("loan");
 
         Supplier<Product> loanSupplier = Loan::new;
@@ -42,7 +40,6 @@ public class FactoryMain {
     static private class Bond implements Product {}
 
     final static private Map<String, Supplier<Product>> map = new HashMap<>();
-    
     static {
         map.put("loan", Loan::new);
         map.put("stock", Stock::new);

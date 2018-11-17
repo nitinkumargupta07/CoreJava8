@@ -1,14 +1,10 @@
 package lambdasinaction.chap5;
+import lambdasinaction.chap4.*;
+
+import java.util.stream.*;
+import java.util.*;
+
 import static lambdasinaction.chap4.Dish.menu;
-
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.concurrent.atomic.LongAdder;
-import java.util.stream.Collectors;
-
-import lambdasinaction.chap4.Dish;
 
 public class Reducing{
 
@@ -20,19 +16,9 @@ public class Reducing{
 
         int sum2 = numbers.stream().reduce(0, Integer::sum);
         System.out.println(sum2);
-        int sum21 = numbers.stream().map(a ->a).reduce(Integer::sum).get();
-        numbers.stream().mapToInt(i -> i).sum();
-        numbers. stream().mapToInt(i -> i.intValue()).sum();
-        numbers.stream().collect(Collectors.summingInt(Integer::intValue));
-        LongAdder a = new LongAdder();
-        
-        numbers.stream().forEach(a ::add);
-     Long aaa  = numbers.stream().filter(Objects::nonNull).count();
-       // int sum21 = numbers.stream().collect(reduce(Integer::sum));
-        System.out.println(sum21);
 
-        int max1111 = numbers.stream().reduce(0, (a1, b1) -> Integer.max(a1, b1));
-        System.out.println(max1111);
+        int max = numbers.stream().reduce(0, (a, b) -> Integer.max(a, b));
+        System.out.println(max);
 
         Optional<Integer> min = numbers.stream().reduce(Integer::min);
         min.ifPresent(System.out::println);

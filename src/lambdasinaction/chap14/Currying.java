@@ -9,7 +9,6 @@ public class Currying {
         DoubleUnaryOperator convertCtoF = curriedConverter(9.0/5, 32);
         DoubleUnaryOperator convertUSDtoGBP = curriedConverter(0.6, 0);
         DoubleUnaryOperator convertKmtoMi = curriedConverter(0.6214, 0);
-       
 
         System.out.println(convertCtoF.applyAsDouble(24));
         System.out.println(convertUSDtoGBP.applyAsDouble(100));
