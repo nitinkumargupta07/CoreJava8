@@ -65,10 +65,10 @@ public class StreamTesting {
 				.collect(Collectors.toList()); // collecting as list
 		System.out.println(productPriceList2);
 
-		List<Float> productPriceList1 = productsList.stream().map(p -> p.price) // fetching price
+		Set<Float> productPriceList1 = productsList.stream().map(p -> p.price) // fetching price
 
 				.filter(p -> p > 30000)// filtering data
-				.collect(Collectors.toList()); // collecting as list
+				.collect(Collectors.toSet()); // collecting as list
 		System.out.println(productPriceList1);
 
 		Float totalPrice = productsList.stream().map(product -> product.price).reduce(0.0f,

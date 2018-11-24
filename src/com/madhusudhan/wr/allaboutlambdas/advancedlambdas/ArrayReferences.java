@@ -45,6 +45,8 @@ public class ArrayReferences {
 	public static void main(String[] args) {
 		ArrayReferences arrayReferences=new ArrayReferences();
 		arrayReferences.arrayReference(10);
+		arrayReferences.arrayReference1(10);
+		arrayReferences.arrayReference2(10);
 		
 
 	}
