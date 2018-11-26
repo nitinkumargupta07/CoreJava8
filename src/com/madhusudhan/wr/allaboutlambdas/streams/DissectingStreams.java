@@ -24,6 +24,10 @@ public class DissectingStreams {
 		.filter(m-> m.getDirector().equals(director))
 		.map(Movie::getName)
 		.forEach(System.out::println);
+		
+		
+		movies.stream().distinct();
+		
 	}
 
 
