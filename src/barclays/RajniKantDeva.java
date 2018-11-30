@@ -3,6 +3,7 @@ package barclays;
 import static java.util.stream.Collectors.toMap;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -11,8 +12,11 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 import java.util.function.ToLongFunction;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import com.paniclater.enums.Sandbox.E;
 
 class Person {
     public String firstName;
@@ -98,6 +102,17 @@ public class RajniKantDeva {
 	}
 
 	public static  void main(String[] args) {
+		String str = "nitin. sachin Raji. sachin Raji nitin . Raji nitin raja rahim . raja nitin . Raji";
+		Map<String ,List<String>> ssss=Arrays.stream(str.split("\\.")).collect(Collectors.groupingBy(Function.identity()));
+		String[] ss=str.split("\\.");
+		System.out.println(Arrays.toString(ss));
+		//ssss.forEach((key, value) -> System.out.println ("key "+key +" value"+value));	
+		//System.out.println(ssss);
+		//String[] toks = "\"Aac 1Zl Aachen\",,DE,5048.850N,00611.483E,189.0m,1,,,,\"AACHEN\"".split(",");
+		///System.out.println(Arrays.toString(toks));
+		
+	}
+	public static  void main2(String[] args) {
 		String str = "nitin sachin Raji sachin Raji nitin Raji nitin raja rahim raja nitin Raji";
 		Long s11 = Stream.of(str.split(" ")).map(elem -> new String(elem))
 				.collect(Collectors.groupingBy(Function.identity(), Collectors.counting())).values().stream()
