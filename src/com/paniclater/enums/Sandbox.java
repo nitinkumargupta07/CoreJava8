@@ -14,8 +14,8 @@ public class Sandbox {
             return "I'm the enum";
         }
     }
-    public static void main2(String[] args) {
-       // System.out.println(E.VALUE.toString());
+    public static void main(String[] args) {
+        System.out.println(E.VALUE.toString());
     	System.out.println(E.VALUE);
     }
     //cannot inherit from final 
@@ -26,7 +26,7 @@ public class Sandbox {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main11(String[] args) {
         System.out.println(new C() {
             @Override
             public String toString() {

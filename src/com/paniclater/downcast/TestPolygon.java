@@ -66,7 +66,7 @@ public class TestPolygon {
 		// Reference type Rectangle is ok because object type Square IsA Rectangle.
 		// At runtime the Square object still behaves like a square -- it runs the
 		// Square version of sayHello() not the rect one.
-		// Rectangle rs = new Square(4,4);
+		///Rectangle rs = new Square(4,4);
 		// The Square constructor runs:
 		// So you can't pull shenanigans like this:
 		// The compiler will let you get away with it because the parameter type and

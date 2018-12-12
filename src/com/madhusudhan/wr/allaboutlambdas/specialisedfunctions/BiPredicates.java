@@ -23,6 +23,9 @@ public class BiPredicates {
 
 	BiPredicate<Employee, Manager> managerHasAssistantPredicate = (emp, manager) -> manager
 			.getPersonalAssistant().equals(emp) ? true : false;
+	
+	BiPredicate<Employee, Manager> managerHasAssistantPredicateUp1 = (emp, manager) -> manager
+			.getPersonalAssistant().equals(emp);
 
 	BiPredicate<Trade, EncryptedTrade> tradeCopier = (trade1, trade2) -> {
 		boolean copySuccess = false;

@@ -15,7 +15,7 @@ public class Suppliers {
 	 *  A supplier of soft drinks
 	 */
 
-	Supplier<List<String>> drinksSupplier = () -> {
+	static Supplier<List<String>> drinksSupplier = () -> {
 	  List<String> drinks = new ArrayList<String>();
 	  
 	  drinks.add("Orange Juice");
@@ -31,6 +31,8 @@ public class Suppliers {
 	}
 	public static void main(String[] args) {
 		new Suppliers().getDrinks();
+		List<String> softDrinks = drinksSupplier.get();
+		softDrinks.stream().forEach(System.out::println);
 	}
 
 }

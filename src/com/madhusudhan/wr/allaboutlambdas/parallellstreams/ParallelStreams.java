@@ -93,11 +93,12 @@ public class ParallelStreams {
 		});
 	}
 	public static void main(String[] args) {
-		new ParallelStreams().serialStream();
-		new ParallelStreams().parallelStream();
-		new ParallelStreams().collectionParallelStream();
-		new ParallelStreams().howManyThreads();
-		new ParallelStreams().changeParallellism();
+		ParallelStreams tytrytr	=new ParallelStreams();
+		tytrytr.serialStream();
+		tytrytr.parallelStream();
+		tytrytr.collectionParallelStream();
+		tytrytr.howManyThreads();
+		tytrytr.changeParallellism();
 		
 	}
 

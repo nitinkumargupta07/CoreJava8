@@ -7,6 +7,7 @@ public class EnumInit {
 		System.out.println(Color.GREEN.toString() + " Main");
 		System.out.println("****************************************");
 		MyInit myInit = new MyInit();
+		System.out.println("***************"+Color.test.BLUE2 + " Main");
 		System.out.println(Color.BLUE.toString() + " Main");
 		MyInit mySecondInit = new MyInit();
 

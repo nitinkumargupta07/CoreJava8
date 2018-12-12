@@ -26,7 +26,7 @@ public class DissectingStreams {
 		.forEach(System.out::println);
 		
 		
-		movies.stream().distinct();
+		////movies.stream().distinct();
 		
 	}
 

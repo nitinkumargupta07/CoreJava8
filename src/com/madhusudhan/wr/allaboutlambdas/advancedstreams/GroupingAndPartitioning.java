@@ -82,6 +82,12 @@ public class GroupingAndPartitioning {
 
 		for (Boolean b : execEmployees.keySet()) {
 			System.out.println(b + " --> " + execEmployees.get(b));
+		}	
+			
+			Map<String, Map<Boolean, List<Employee>>> execEmployees11 = employees.stream()
+					.collect(groupingBy((Employee::getDepartment), partitioningBy(Employee::isExecutive)));
+			for(String d:execEmployees11.keySet()) {
+				System.out.println(d + " --> " + execEmployees.get(d));
 		}
 	}
 

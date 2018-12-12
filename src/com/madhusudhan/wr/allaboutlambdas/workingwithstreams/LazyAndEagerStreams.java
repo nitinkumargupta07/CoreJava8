@@ -52,7 +52,7 @@ public class LazyAndEagerStreams {
 	}
 
 	public static void main(String[] args) {
-//		new LazyAndEagerStreams().lazyIntermediateOperator();
+///	new LazyAndEagerStreams().lazyIntermediateOperator();
 		new LazyAndEagerStreams().eagerTerminalOperator();
 	}
 

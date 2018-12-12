@@ -138,8 +138,14 @@ public class SpecialisedFunctions {
 	}
 
 	public static void main(String[] args) {
-		new SpecialisedFunctions().checkEvenNumber(91);
-		new SpecialisedFunctions().specialisedConsumers();
-		new SpecialisedFunctions().unitypeSpecialisedFunctions();
+		SpecialisedFunctions	sdfdsfds=new SpecialisedFunctions();
+		sdfdsfds.checkEvenNumber(91);
+		sdfdsfds.checkEvenNumberUsingIntPredicate(91);
+		sdfdsfds.specialisedPredicates();
+		sdfdsfds.specialisedConsumers();
+		sdfdsfds.unitypeSpecialisedFunctions();
+		sdfdsfds.primitiveConversionFunctions();
+		sdfdsfds.specialisedFunctions();
+		sdfdsfds.specialisedSuppliers();
 	}
 }

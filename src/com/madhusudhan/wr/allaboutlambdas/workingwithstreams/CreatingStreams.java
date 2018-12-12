@@ -103,7 +103,7 @@ public class CreatingStreams {
 	public static void main(String[] args) throws IOException {
 		 new CreatingStreams().testEmptyStreams();
 		 new CreatingStreams().testStreamsFromValues();
-		new CreatingStreams().testInfiniteStreams();
+	///	new CreatingStreams().testInfiniteStreams();
 		 new CreatingStreams().testFileStream();
 	}
 
