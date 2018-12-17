@@ -19,6 +19,9 @@ public class ItemUtil {
 		Item item8 = new Item(8, "banana7", new BigDecimal(19.75), 712);
 		Item item9 = new Item(9, "banana8", new BigDecimal(129.75), 912);
 		Item item10 = new Item(10, "banana9", new BigDecimal(112.75), 912);
+		Item item18 = new Item(8, "banana7", new BigDecimal(17.75), 712);
+		Item item19 = new Item(9, "banana8", new BigDecimal(17.75), 912);
+		Item item110 = new Item(10, "banana9",new BigDecimal(17.75), 912);
 		items.add(item1);
 		items.add(item2);
 		items.add(item3);
@@ -31,6 +34,19 @@ public class ItemUtil {
 		items.add(item10);
 		items.add(item5);
 		items.add(item6);
+		items.add(item7);
+		items.add(item1);
+		items.add(item2);
+		items.add(item3);
+		items.add(item4);
+		items.add(item5);
+		items.add(item6);
+		items.add(item7);
+		items.add(item8);
+		items.add(item9);
+		items.add(item110);
+		items.add(item18);
+		items.add(item19);
 		items.add(item7);
 		return items;
 	}
